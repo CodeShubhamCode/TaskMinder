@@ -1,38 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a40, #282c34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #ffdd57;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TodoWrapper {
+  background: rgba(34, 34, 68, 0.9);
+  margin-top: 2rem;
+  padding: 2.5rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TodoForm {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 2px solid #ffdd57;
+  padding: 0.75rem 1rem;
+  width: 70%;
+  color: #fff;
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+}
+
+.todo-input::placeholder {
+  color: #ffffffb3;
+}
+
+.todo-input:focus {
+  border-color: #ffdd57;
+}
+
+.todo-btn {
+  background: #ffdd57;
+  color: #282c34;
+  border: none;
+  padding: 0.75rem 1.0rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 40%;
+  margin-left: 1rem;
+}
+
+.todo-btn:hover {
+  background: #ffd700;
+  transform: translateY(-2px);
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #ffdd57;
+  color: #282c34;
+  padding: 0.75rem 1rem;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: slideIn 0.5s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.Todo:hover {
+  background: #ffd700;
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
+@keyframes slideIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateX(-50%);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #ffdd57;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+  color: #ff6584;
 }
