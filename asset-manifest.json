@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TaskMinder/static/css/main.3208dff5.css",
+    "main.js": "/TaskMinder/static/js/main.3c8c8c04.js",
+    "static/js/453.e3192b25.chunk.js": "/TaskMinder/static/js/453.e3192b25.chunk.js",
+    "index.html": "/TaskMinder/index.html",
+    "main.3208dff5.css.map": "/TaskMinder/static/css/main.3208dff5.css.map",
+    "main.3c8c8c04.js.map": "/TaskMinder/static/js/main.3c8c8c04.js.map",
+    "453.e3192b25.chunk.js.map": "/TaskMinder/static/js/453.e3192b25.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3208dff5.css",
+    "static/js/main.3c8c8c04.js"
+  ]
+}
